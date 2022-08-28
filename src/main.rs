@@ -32,6 +32,7 @@ fn calculate_probability(vin: &str) -> Json<FailProbability> {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/calculateDisselUsageForDistance", routes![calculate_diesel_fuel_usage])
-    .mount("/probabilityOfUnitInjectorFail", routes![calculate_probability])
+    rocket::build()
+        .mount("/calculateDisselUsageForDistance", routes![calculate_diesel_fuel_usage])
+        .mount("/probabilityOfUnitInjectorFail", routes![calculate_probability])
 }
